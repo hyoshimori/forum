@@ -1,6 +1,5 @@
 <?php
 // Include the config file
-// require_once 'config.php';
 
 // $_POST -> super global var
 if (!empty($_POST["submit__button"])) {
@@ -9,11 +8,11 @@ if (!empty($_POST["submit__button"])) {
 }
 
 // DB connection
-// try {
-//     $dbh = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-// } catch (PDOException $e) {
-//     echo "Something went wrong: " . $e->getMessage();
-// }
+try {
+  $dbh = new PDO('mysql:host=localhost;dbname=forum', 'root', '');
+} catch (PDOException $e) {
+  echo "Something went wrong: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
